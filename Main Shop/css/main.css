@@ -1,0 +1,78 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    width: 100%;
+    background-color: #f8f8f8; /* Warna card */
+    padding: 20px;
+    border-radius: 12px; /* Border radius card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* стиль для карусели */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Для плавности на iOS */
+    margin-top: 20px; /* Добавим небольшой отступ сверху */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%; /* Ширина каждого элемента карусели */
+    margin-right: 20px; /* Отступ между элементами карусели */
+    scroll-snap-align: start;
+}
+
+.carousel-item:last-child {
+    margin-right: 0; /* Убираем отступ справа у последнего элемента */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стили для страницы с карточками товаров */
+.product-cards {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерное распределение карточек по контейнеру */
+    padding: 0 5%; /* Отступы от краев экрана */
+}
+
+.product-card {
+    width: calc(33.33% - 20px); /* Равномерное распределение карточек в четыре колонки */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card {
+    width: calc(33.33% - 20px); /* Ширина карточки, учитывая отступы */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative; /* Относительное позиционирование для контейнера карточки */
+}
+
+.product-card img {
+    width: 100%; /* Изображение занимает всю доступную ширину карточки */
+    height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+    display: block; /* Убираем лишние промежутки сверху и снизу у изображения */
+    border-radius: 8px; /* Закругляем углы изображения */
+    object-fit: cover; /* Масштабируем и обрезаем изображение до заполнения области */
+}
+

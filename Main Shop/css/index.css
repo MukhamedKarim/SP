@@ -1,0 +1,230 @@
+/*Тело*/
+body {
+    font-family: "Comic Sans MS", cursive;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header div ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header div ul li a, .navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+.item-shop-left{
+    margin-left: 20px;
+}
+
+.green{
+    display: inline-block;
+    background-color: #32CD32;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    
+  
+}
+
+/*content*/
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.zone50{
+    max-width: 50%;
+}
+
+.product-item {
+    flex: 1; /* Расширение блока с текстом на всю доступную ширину */
+    flex-basis: 50%; /* Занимает половину ширины экрана */
+    max-width: 100%; /* Максимальная ширина блока равна половине ширины экрана */
+    padding-right: 20px; /* Отступ справа от блока с текстом */
+    flex-wrap: wrap; /* Разрешаем перенос текста */
+}
+
+.product-list {
+    
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 15px; /* Убираем внутренний отступ у списка */
+    display: flex; /* Устанавливаем флекс-контейнер для элементов списка */
+    flex-wrap: wrap; /* Разрешаем перенос элементов списка */
+}
+
+.product-details p {
+    margin: 15px 0; /* Отступы для абзацев в блоке деталей */
+    width: 100%; /* Ширина абзаца равна ширине блока */
+}
+
+
+
+
+/* стиль для карусели */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Для плавности на iOS */
+    margin-top: 20px; /* Добавим небольшой отступ сверху */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%; /* Ширина каждого элемента карусели */
+    margin-right: 20px; /* Отступ между элементами карусели */
+    scroll-snap-align: start;
+}
+
+.carousel-item:last-child {
+    margin-right: 0; /* Убираем отступ справа у последнего элемента */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*Поиск и кнопки*/
+.search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.search input  {
+    font-family: "Comic Sans MS", cursive;
+    padding: 10px;
+    margin-right: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.search input:focus {
+    border-color: #ff9900;
+}
+
+button,.navigation{
+    background-color: #ff9900;
+    font-family: "Comic Sans MS", cursive;
+    color: #fff;
+    padding: 10px;
+    margin: 0 10px 0 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+button:hover ,.navigation:hover{
+    background-color: #ff6600;
+}
+
+/*Footer*/
+footer {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    background-color: #444;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0.5% 0;
+}
+
+.contact-info, .social-links {
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+}
+
+.contact-info h3, .social-links h3 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.social-links {
+    text-align: center; /* Выравниваем элементы по центру */
+}
+
+.social-icons {
+    margin-top: 10px; /* Отступ сверху для раздела иконок */
+}
+
+.social-icons a {
+    display: inline-block; /* Располагаем иконки в строку */
+    margin-right: 10px; /* Отступ между иконками */
+}
+
+.social-icons img {
+    width: 40px; /* Задаем ширину иконок */
+    height: 40px; /* Задаем высоту иконок */
+    border-radius: 50%; /* Закругляем углы, чтобы создать круглые иконки */
+    border: 2px solid #ccc; /* Добавляем рамку вокруг иконок */
+    transition: transform 0.3s ease; /* Добавляем плавное изменение при наведении */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Увеличиваем размер иконки при наведении */
+}
+
+
+
+.footer-bottom {
+    text-align: center;
+}
+
+
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 1200px) {
+    .product-card {
+        width: calc(33.33% - 20px); /* При меньших экранах, распределить по три карточки в строке */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* При очень маленьких экранах, распределить по две карточки в строке */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 20px); /* При очень маленьких экранах, отображаем по одной карточке в строке */
+    }
+}
